@@ -1,4 +1,5 @@
 PGM WILL HAVE TO DO THE FOLLOWING
+----------------------------------
 
 
 1)In the PFF algorithm, we decide if a new frame should be allocated based on the time since the last page fault.  For this, you can use a number of page accesses (remember those integers in the file)
