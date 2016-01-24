@@ -1,16 +1,9 @@
 PGM WILL HAVE TO DO THE FOLLOWING
 
 
-1)	The DeviceID is correct
-2)	All times are in the past, nothing in the future
-3)	Validate that the free block list is accurate this includes
-           a.	Making sure the free block list contains ALL of the free blocks
-           b.	Make sure than there are no files/directories stored on items listed in the free block list
-4)	Each directory contains . and .. and their block numbers are correct
-5)	Each directory’s link count matches the number of links in the filename_to_inode_dict
-6)	If the data contained in a location pointer is an array, that indirect is one
-7)	That the size is valid for the number of block pointers in the location array. The three possibilities are:
-        a.	size<blocksize if  indirect=0 and size>0
-        b.	size<blocksize*length of location array if indirect!=0
-        c.	size>blocksize*(length of location array-1) if indirect !=0
+1)In the PFF algorithm, we decide if a new frame should be allocated based on the time since the last page fault.  For this, you can use a number of page accesses (remember those integers in the file)
+You must decide what a reasonable F value is.Try a few different values.  Record the total number of page faults across the run of the program.  Put a short comment in your code about how F impacts the total number of page faults.
+
+
+2)In the VSWS algorithm, we have M,L and Q to help us decide when to run the algorithm.  Determine some reasonable numbers for these values and put a comment in your code to indicate how changes impact the total number of page faults.
 
